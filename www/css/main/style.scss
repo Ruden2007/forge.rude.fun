@@ -1,0 +1,221 @@
+$mainTextColor: #BBBBBB;
+$mainLogoColor: #7596E4;
+$mainHeadColor: #A97DE6;
+$additionalHeadColor: #8B67BD;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-name {
+  color: $mainLogoColor;
+  font-weight: 600;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: $mainTextColor;
+  background-color: #1E1E1E;
+  font-family: "Segoe UI";
+}
+
+header {
+  color: white;
+
+  .main-header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #20232A;
+
+    a {
+      &:hover {
+        color: $mainLogoColor;
+      }
+
+      &:focus {
+        outline: 0;
+        background-color: #373940;
+        border-radius: 15px;
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+
+      .logo {
+        height: 40px;
+        margin: 10px 20px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .pages {
+        .page {
+          padding: 5px 10px;
+        }
+      }
+
+      .other {
+        .link {
+          display: flex;
+          align-items: center;
+          padding: 5px 10px;
+          white-space: nowrap;
+          font-size: 14px;
+
+          svg.open-link {
+            margin-left: 5px;
+            vertical-align: -2px;
+            color: #6B6B6B;
+          }
+        }
+      }
+    }
+  }
+
+  .additional-header {
+    margin-top: 60px;
+    background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.8)),
+    url("https://www.datocms-assets.com/38511/1621602995-sketch.png?auto=format") center center / cover;
+
+    .container {
+      padding-top: 95px;
+      padding-bottom: 85px;
+
+      .content {
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .logo-title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100px;
+
+          img {
+            height: 100%;
+            margin-right: 15px;
+          }
+
+          h1 {
+            color: $mainLogoColor;
+            font-size: 65px;
+          }
+        }
+
+        .description {
+          padding-top: 15px;
+          text-align: center;
+          font-size: 24px;
+          letter-spacing: 0.01em;
+          font-weight: 200;
+        }
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-top: 40px;
+        }
+
+        .start-button {
+          text-align: right;
+          padding-right: 7px;
+          padding-left: 7px;
+
+
+          a {
+            display: inline-block;
+            font-size: 16px;
+            background-color: $mainLogoColor;
+            color: #000000;
+            padding: 10px 25px;
+            white-space: nowrap;
+            transition: background-color 0.2s ease-out;
+
+            &:hover {
+              background-color: #ffffff;
+            }
+          }
+        }
+
+        .tutorial-button {
+          padding-left: 15px;
+          padding-right: 7px;
+
+          a {
+            display: inline-block;
+            font-size: 16px;
+            color: $mainLogoColor;
+            transition: color 0.2s ease-out;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  flex: 1 1 auto;
+  width: 90%;
+  margin: 0 auto;
+
+  section {
+    margin: 60px auto 65px;
+    line-height: 25px;
+
+    h3 {
+      color: $mainHeadColor;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .greeting {
+    font-size: 18px;
+  }
+
+  .about-project {
+    display: flex;
+    column-gap: 40px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: $additionalHeadColor;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 25px;
+      }
+
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

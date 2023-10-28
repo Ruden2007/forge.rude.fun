@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-name {
+  color: #7596E4;
+  font-weight: 600;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #BBBBBB;
+  background-color: #1E1E1E;
+  font-family: "Segoe UI";
+}
+
+header {
+  color: white;
+}
+header .main-header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #20232A;
+}
+header .main-header a:hover {
+  color: #7596E4;
+}
+header .main-header a:focus {
+  outline: 0;
+  background-color: #373940;
+  border-radius: 15px;
+}
+header .main-header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+header .main-header .content .logo {
+  height: 40px;
+  margin: 10px 20px;
+}
+header .main-header .content .logo img {
+  height: 100%;
+}
+header .main-header .content .pages .page {
+  padding: 5px 10px;
+}
+header .main-header .content .other .link {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+header .main-header .content .other .link svg.open-link {
+  margin-left: 5px;
+  vertical-align: -2px;
+  color: #6B6B6B;
+}
+header .additional-header {
+  margin-top: 60px;
+  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.8)), url("https://www.datocms-assets.com/38511/1621602995-sketch.png?auto=format") center center/cover;
+}
+header .additional-header .container {
+  padding-top: 95px;
+  padding-bottom: 85px;
+}
+header .additional-header .container .content {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header .additional-header .container .content .logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+header .additional-header .container .content .logo-title img {
+  height: 100%;
+  margin-right: 15px;
+}
+header .additional-header .container .content .logo-title h1 {
+  color: #7596E4;
+  font-size: 65px;
+}
+header .additional-header .container .content .description {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  font-weight: 200;
+}
+header .additional-header .container .content .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+header .additional-header .container .content .start-button {
+  text-align: right;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+header .additional-header .container .content .start-button a {
+  display: inline-block;
+  font-size: 16px;
+  background-color: #7596E4;
+  color: #000000;
+  padding: 10px 25px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease-out;
+}
+header .additional-header .container .content .start-button a:hover {
+  background-color: #ffffff;
+}
+header .additional-header .container .content .tutorial-button {
+  padding-left: 15px;
+  padding-right: 7px;
+}
+header .additional-header .container .content .tutorial-button a {
+  display: inline-block;
+  font-size: 16px;
+  color: #7596E4;
+  transition: color 0.2s ease-out;
+}
+header .additional-header .container .content .tutorial-button a:hover {
+  color: #ffffff;
+}
+
+main {
+  flex: 1 1 auto;
+  width: 90%;
+  margin: 0 auto;
+}
+main section {
+  margin: 60px auto 65px;
+  line-height: 25px;
+}
+main section h3 {
+  color: #A97DE6;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+main .greeting {
+  font-size: 18px;
+}
+main .about-project {
+  display: flex;
+  column-gap: 40px;
+}
+main .about-project .content {
+  display: flex;
+  flex-direction: column;
+}
+main .about-project .content h3 {
+  color: #8B67BD;
+}
+main .about-project .content p {
+  font-size: 16px;
+  margin-top: 25px;
+}
+main .about-project .content p:first-child {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
