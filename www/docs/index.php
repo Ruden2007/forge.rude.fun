@@ -561,8 +561,9 @@
         </div>
     </div>
 
-    <div class="show-modules-btn" onclick="document.querySelector('main .modules').classList.toggle('active')">
-        <i class="fa-solid fa-angle-left"></i>
+    <div class="show-modules-btn" onclick="showModulesHandler(this)">
+        <i class="fa-solid fa-angle-left left"></i>
+        <i class="fa-solid fa-angle-right right"></i>
         <img src="/data/img/logo-512x512.png" alt="logo">
     </div>
 </main>
@@ -570,6 +571,17 @@
 <script src="/modules/ForgeCraft-UI/ForgeCraft.js"></script>
 <script>
     let windowTabs
+
+    function showModulesHandler(elem) {
+        const modules = document.querySelector('main .modules')
+        const modulesW = modules.clientWidth
+        if (modulesW) {
+            document.querySelector(':root').style.setProperty('--modules-width', `${modulesW}px`)
+        }
+
+        modules.classList.toggle('active')
+        elem.classList.toggle('active')
+    }
 </script>
 <script type="module">
     import WindowTabs from "../modules/ForgeCraft-UI/components/WindowTabs.js";
@@ -578,6 +590,11 @@
     const windows = document.querySelector('.windows')
 
     windowTabs = new WindowTabs(tabs, windows)
+
+    windowTabs.addEventListener('changeWindow', () => {
+        document.querySelector('main .modules').classList.toggle('active')
+        document.querySelector('main .show-modules-btn').classList.toggle('active')
+    })
 
 </script>
 </body>
