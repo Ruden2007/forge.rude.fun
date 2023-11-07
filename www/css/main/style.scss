@@ -1,151 +1,67 @@
-$mainTextColor: #BBBBBB;
-$mainLogoColor: #7596E4;
-$mainHeadColor: #A97DE6;
-$additionalHeadColor: #8B67BD;
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.project-name {
-  color: $mainLogoColor;
-  font-weight: 600;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: $mainTextColor;
-  background-color: #1E1E1E;
-  font-family: "Segoe UI";
-}
-
-header {
-  color: white;
-
-  .main-header {
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #20232A;
-
-    a {
-      &:hover {
-        color: $mainLogoColor;
-      }
-
-      &:focus {
-        outline: 0;
-        background-color: #373940;
-        border-radius: 15px;
-      }
-    }
-
-    .content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-
-      .logo {
-        height: 40px;
-        margin: 10px 20px;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      .pages {
-        .page {
-          padding: 5px 10px;
-        }
-      }
-
-      .other {
-        .link {
-          display: flex;
-          align-items: center;
-          padding: 5px 10px;
-          white-space: nowrap;
-          font-size: 14px;
-
-          svg.open-link {
-            margin-left: 5px;
-            vertical-align: -2px;
-            color: #6B6B6B;
-          }
-        }
-      }
-    }
+@media (max-width: 480px) {
+  .logo-title {
+    flex-direction: column;
   }
 
-  .additional-header {
-    margin-top: 60px;
-    background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.8)),
-    url("https://www.datocms-assets.com/38511/1621602995-sketch.png?auto=format") center center / cover;
+  .bottom {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
 
-    .container {
-      padding-top: 95px;
-      padding-bottom: 85px;
+.additional-header {
+  color: white;
 
-      .content {
-        margin: 0 auto;
-        padding: 0 20px;
+  margin-top: 60px;
+  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.8)),
+  url("https://www.datocms-assets.com/38511/1621602995-sketch.png?auto=format") center center / cover;
 
-        .logo-title {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+  .container {
+    padding-top: 95px;
+    padding-bottom: 85px;
+
+    .content {
+      margin: 0 auto;
+      padding: 0 20px;
+
+      .logo-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
           height: 100px;
-
-          img {
-            height: 100%;
-            margin-right: 15px;
-          }
-
-          h1 {
-            color: $mainLogoColor;
-            font-size: 65px;
-          }
+          margin-right: 15px;
         }
 
-        .description {
-          padding-top: 15px;
-          text-align: center;
-          font-size: 24px;
-          letter-spacing: 0.01em;
-          font-weight: 200;
+        h1 {
+          color: var(--main-logo-color);
+          font-size: clamp(36px, 10vw, 65px);
         }
+      }
 
-        .bottom {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding-top: 40px;
-        }
+      .description {
+        padding-top: 15px;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 0.01em;
+        font-weight: 200;
+      }
 
-        .start-button {
-          text-align: right;
-          padding-right: 7px;
-          padding-left: 7px;
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 40px;
 
+        .button {
+          font-size: 16px;
+          padding: 10px 25px;
 
-          a {
-            display: inline-block;
-            font-size: 16px;
-            background-color: $mainLogoColor;
+          &.start-button {
+            background-color: var(--main-logo-color);
             color: #000000;
-            padding: 10px 25px;
             white-space: nowrap;
             transition: background-color 0.2s ease-out;
 
@@ -153,16 +69,13 @@ header {
               background-color: #ffffff;
             }
           }
-        }
 
-        .tutorial-button {
-          padding-left: 15px;
-          padding-right: 7px;
+          &.tutorial-button {
+            padding-left: 15px;
+            padding-right: 7px;
+            white-space: nowrap;
 
-          a {
-            display: inline-block;
-            font-size: 16px;
-            color: $mainLogoColor;
+            color: var(--main-logo-color);
             transition: color 0.2s ease-out;
 
             &:hover {
@@ -171,13 +84,12 @@ header {
           }
         }
       }
+
     }
   }
 }
 
 main {
-  flex: 1 1 auto;
-  width: 90%;
   margin: 0 auto;
 
   section {
@@ -185,7 +97,7 @@ main {
     line-height: 25px;
 
     h3 {
-      color: $mainHeadColor;
+      color: var(--main-head-color);
       margin-bottom: 20px;
       font-weight: 500;
       font-size: 20px;
@@ -198,14 +110,18 @@ main {
 
   .about-project {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 40px;
+    row-gap: 40px;
 
     .content {
+      flex: 1 0 200px;
+
       display: flex;
       flex-direction: column;
 
       h3 {
-        color: $additionalHeadColor;
+        color: var(--additional-head-color);
       }
 
       p {

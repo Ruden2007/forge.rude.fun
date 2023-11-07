@@ -1,0 +1,14 @@
+:root {
+    --main-text-color: #BBBBBB;
+    --main-logo-color: #7596E4;
+    --main-head-color: #A97DE6;
+    --additional-head-color: #8B67BD;
+
+    --main-shadow-color: rgba(0, 0, 0, 0.2);
+    --main-bgc: #1E1E1E;
+
+    --header-bgc: #20232A;
+    --header-focus-color: #373940;
+    --icon-color1: #6B6B6B;
+}
+

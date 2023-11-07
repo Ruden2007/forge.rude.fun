@@ -1,0 +1,111 @@
+@media (min-width: 768px) {
+  main .modules.selectable {
+    position: sticky;
+    top: 75px;
+    min-height: 80vh;
+    height: min-content;
+    border: 1px solid var(--main-logo-color);
+    border-radius: 5px;
+  }
+  main .show-modules-btn {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  main .modules.selectable {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: var(--main-bgc);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  main .modules.selectable.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .show-modules-btn {
+    display: flex;
+  }
+}
+main {
+  display: flex;
+  column-gap: 15px;
+  padding: 15px;
+}
+main .selectable {
+  background: none;
+}
+main .modules.selectable {
+  display: block;
+}
+main .windows {
+  flex: 1 1 auto;
+}
+main .show-modules-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--header-bgc);
+  color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+main .show-modules-btn img {
+  height: 100%;
+}
+
+.windows .page section {
+  padding-left: 15px;
+  border-left: 1px solid var(--main-head-color);
+}
+.windows .page section pre code {
+  margin-left: -0.4rem;
+}
+.windows .page code {
+  color: var(--main-logo-color);
+}
+.windows .page pre {
+  margin: 0.8rem 0;
+}
+.windows .page pre code {
+  background-color: #373940;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+.windows .page p {
+  margin: 1rem 0;
+}
+.windows .page ul, .windows .page ol, .windows .page dl {
+  margin: 1rem 0;
+  padding-left: 40px;
+}
+.windows .page .class-heading {
+  color: var(--main-logo-color);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.windows .page .method-heading {
+  color: var(--main-head-color);
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.windows .page .method-heading::after {
+  content: " :";
+}
+.windows .page .param-name {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

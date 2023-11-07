@@ -1,147 +1,77 @@
-* {
-  margin: 0;
-  padding: 0;
+@media (max-width: 480px) {
+  .logo-title {
+    flex-direction: column;
+  }
+  .bottom {
+    flex-direction: column;
+    row-gap: 15px;
+  }
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.project-name {
-  color: #7596E4;
-  font-weight: 600;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: #BBBBBB;
-  background-color: #1E1E1E;
-  font-family: "Segoe UI";
-}
-
-header {
+.additional-header {
   color: white;
-}
-header .main-header {
-  position: fixed;
-  z-index: 9999;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #20232A;
-}
-header .main-header a:hover {
-  color: #7596E4;
-}
-header .main-header a:focus {
-  outline: 0;
-  background-color: #373940;
-  border-radius: 15px;
-}
-header .main-header .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-}
-header .main-header .content .logo {
-  height: 40px;
-  margin: 10px 20px;
-}
-header .main-header .content .logo img {
-  height: 100%;
-}
-header .main-header .content .pages .page {
-  padding: 5px 10px;
-}
-header .main-header .content .other .link {
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-  white-space: nowrap;
-  font-size: 14px;
-}
-header .main-header .content .other .link svg.open-link {
-  margin-left: 5px;
-  vertical-align: -2px;
-  color: #6B6B6B;
-}
-header .additional-header {
   margin-top: 60px;
   background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.8)), url("https://www.datocms-assets.com/38511/1621602995-sketch.png?auto=format") center center/cover;
 }
-header .additional-header .container {
+.additional-header .container {
   padding-top: 95px;
   padding-bottom: 85px;
 }
-header .additional-header .container .content {
+.additional-header .container .content {
   margin: 0 auto;
   padding: 0 20px;
 }
-header .additional-header .container .content .logo-title {
+.additional-header .container .content .logo-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
 }
-header .additional-header .container .content .logo-title img {
-  height: 100%;
+.additional-header .container .content .logo-title img {
+  height: 100px;
   margin-right: 15px;
 }
-header .additional-header .container .content .logo-title h1 {
-  color: #7596E4;
-  font-size: 65px;
+.additional-header .container .content .logo-title h1 {
+  color: var(--main-logo-color);
+  font-size: clamp(36px, 10vw, 65px);
 }
-header .additional-header .container .content .description {
+.additional-header .container .content .description {
   padding-top: 15px;
   text-align: center;
   font-size: 24px;
   letter-spacing: 0.01em;
   font-weight: 200;
 }
-header .additional-header .container .content .bottom {
+.additional-header .container .content .bottom {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding-top: 40px;
 }
-header .additional-header .container .content .start-button {
-  text-align: right;
-  padding-right: 7px;
-  padding-left: 7px;
-}
-header .additional-header .container .content .start-button a {
-  display: inline-block;
+.additional-header .container .content .bottom .button {
   font-size: 16px;
-  background-color: #7596E4;
-  color: #000000;
   padding: 10px 25px;
+}
+.additional-header .container .content .bottom .button.start-button {
+  background-color: var(--main-logo-color);
+  color: #000000;
   white-space: nowrap;
   transition: background-color 0.2s ease-out;
 }
-header .additional-header .container .content .start-button a:hover {
+.additional-header .container .content .bottom .button.start-button:hover {
   background-color: #ffffff;
 }
-header .additional-header .container .content .tutorial-button {
+.additional-header .container .content .bottom .button.tutorial-button {
   padding-left: 15px;
   padding-right: 7px;
-}
-header .additional-header .container .content .tutorial-button a {
-  display: inline-block;
-  font-size: 16px;
-  color: #7596E4;
+  white-space: nowrap;
+  color: var(--main-logo-color);
   transition: color 0.2s ease-out;
 }
-header .additional-header .container .content .tutorial-button a:hover {
+.additional-header .container .content .bottom .button.tutorial-button:hover {
   color: #ffffff;
 }
 
 main {
-  flex: 1 1 auto;
-  width: 90%;
   margin: 0 auto;
 }
 main section {
@@ -149,7 +79,7 @@ main section {
   line-height: 25px;
 }
 main section h3 {
-  color: #A97DE6;
+  color: var(--main-head-color);
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 20px;
@@ -159,14 +89,17 @@ main .greeting {
 }
 main .about-project {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 40px;
+  row-gap: 40px;
 }
 main .about-project .content {
+  flex: 1 0 200px;
   display: flex;
   flex-direction: column;
 }
 main .about-project .content h3 {
-  color: #8B67BD;
+  color: var(--additional-head-color);
 }
 main .about-project .content p {
   font-size: 16px;

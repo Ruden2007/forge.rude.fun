@@ -6,18 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/basic-styles.css">
     <link rel="stylesheet" href="/css/main/style.css">
 
     <meta name="robots" content="index,follow">
     <title>ForgeCraft UI — библиотека для быстрого создания пользовательского интерфейса.</title>
-    <meta name="description" content="
-        ForgeCraft UI не просто набор компонентов. Это моя
-        попытка упростить жизнь разработчикам, предоставив им
-        мощные и единообразные инструменты для создания интерактивных
-        веб-приложений. Моя цель — сделать так, чтобы каждый проект,
-        созданный с использованием ForgeCraft UI, был не только
-        функциональным, но и эстетически привлекательным. 
-    ">
+    <meta name="description" content="ForgeCraft UI не просто набор компонентов. Это моя попытка упростить жизнь разработчикам, предоставив им мощные и единообразные инструменты для создания интерактивных веб-приложений. Моя цель — сделать так, чтобы каждый проект, созданный с использованием ForgeCraft UI, был не только функциональным, но и эстетически привлекательным.">
 
     <meta name="keywords" content="">
 
@@ -49,79 +44,37 @@
     <meta property="twitter:card" content="summary">
     <meta property="twitter:site" content="ForgeCraft UI">
     <meta property="twitter:title" content="ForgeCraft UI — библиотека для быстрого создания пользовательского интерфейса.">
-    <meta property="twitter:description" content="
-        ForgeCraft UI не просто набор компонентов. Это моя
-        попытка упростить жизнь разработчикам, предоставив им
-        мощные и единообразные инструменты для создания интерактивных
-        веб-приложений. Моя цель — сделать так, чтобы каждый проект,
-        созданный с использованием ForgeCraft UI, был не только
-        функциональным, но и эстетически привлекательным.
-    ">
+    <meta property="twitter:description" content="ForgeCraft UI не просто набор компонентов. Это моя попытка упростить жизнь разработчикам, предоставив им мощные и единообразные инструменты для создания интерактивных веб-приложений. Моя цель — сделать так, чтобы каждый проект, созданный с использованием ForgeCraft UI, был не только функциональным, но и эстетически привлекательным.">
     <meta property="twitter:image" content="http://forge.ruden.fun/android-chrome-192x192.png">
 
 
 </head>
 <body>
-<header>
-    <div class="main-header">
-        <div class="content">
-            <a href="/" class="logo" tabindex="1">
-                <img src="data/img/logo-512x512.png" alt="logo">
-            </a>
-            <nav class="pages">
-                <a href="" class="page" tabindex="2">Документация</a>
-                <a href="" class="page" tabindex="3">Введение</a>
-            </nav>
-<!--            <form action="" class="search-form">-->
-
-<!--            </form>-->
-            <div class="other">
-                <a href="https://github.com/Ruden2007/ForgeCraft-UI/" target="_blank" rel="noopener" class="link" tabindex="4">
-                    GitHub
-                    <svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="open-link">
-                        <path fill="currentColor" d="
-                            M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
-                            0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                        </path>
-                        <polygon fill="currentColor" points="
-                          45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
-                          14.9 62.8,22.9 71.5,22.9">
-                        </polygon>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="header">
+    <?php include "./includes/html/header.html" ?>
     <div class="additional-header">
         <div class="container">
             <div class="content">
                 <div  class="logo-title">
-                    <img src="data/img/logo-512x512.png" alt="logo">
+                    <img src="/data/img/logo-512x512.png" alt="logo">
                     <h1>ForgeCraft UI</h1>
                 </div>
                 <p class="description">
                     JavaScript — библиотека для быстрого создания пользовательского интерфейса.
                 </p>
                 <div class="bottom">
-                    <div class="start-button">
-                        <a href="docs/getting-started.html">Начать работу</a>
-                    </div>
-                    <div class="tutorial-button">
-                        <a class="css-13foh4g" href="tutorial/tutorial.html">Перейти к введению
-                            <svg height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.53657 8.69699" class="css-b7q1rs">
-                                <path d="
-                                    M.18254,8.697a.18149.18149,0,0,1-.12886-.31034L4.09723,4.34126.05369.29954a.18149.18149,
-                                    0,0,1,.2559-.2559L4.4838,4.21785a.18149.18149,0,0,1,0,.2559L.30958,8.648A.18149.18149,
-                                    0,0,1,.18254,8.697Z
-                            " fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
+                    <a class="start-button button" href="docs/getting-started.html">
+                        Начать работу
+                    </a>
+                    <a class="tutorial-button button" href="tutorial/tutorial.html">
+                        Перейти к введению
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</div>
 <main>
     <section class="greeting">
         <p>
